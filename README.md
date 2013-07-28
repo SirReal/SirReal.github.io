@@ -1,3 +1,5 @@
 SirReal.github.io
 =================
-This repo contains my my github website: http://sirreal.github.io
+My personal website: [surrell.es](http://surrell.es).
+
+It's <del>blank</del> a work in progress.
