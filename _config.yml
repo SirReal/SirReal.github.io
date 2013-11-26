@@ -1,0 +1,6 @@
+safe: true
+lsi: false
+pygments: true
+source: .
+exclude: ["Gemfile*", "*.sublime-*", "README.md", "CNAME"]
+encoding: UTF-8
