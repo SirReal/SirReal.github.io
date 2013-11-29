@@ -2,5 +2,5 @@ safe: true
 lsi: false
 pygments: true
 source: .
-exclude: ["Gemfile*", "*.sublime-*", "README.md", "CNAME"]
+exclude: ["Gemfile*", "*.sublime-*", "README.md", "CNAME", "compass"]
 encoding: UTF-8
