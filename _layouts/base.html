@@ -1,10 +1,26 @@
+{% assign p_first = page.path | split: '/' | first %}
+{% case p_first %}
+    {% when 'en' %}
+        {% assign en_link = page.path %}
+        {% assign es_link = page.path | split: '/' %}
+        {% assign es_link = es_link[1] %}
+    {% else %}
+        {% assign en_link = 'en' | append: '/' | append: page.path %}
+        {% assign es_link = page.path %}
+{% endcase %}
 <!DOCTYPE html>
 <html>
-  {% include head.html %}
-  <body>
-    <div class="wrapper">
-      {{ content }}
-    </div>
-    <script src="js/scale.fix.js"></script>
-  </body>
+    {% include head.html %}
+    <body>
+        <div class="wrapper">
+            <header>
+                <h1>surrell<span class="light">.es</span></h1>
+                <p>{{ p_first }}</p>
+                <a href="/{{ en_link }}" title="English">en</a>
+                <a href="/{{ es_link }}" title="Español">es</a>
+            </header>
+            {{ content }}
+        </div>
+        <script src="js/scale.fix.js"></script>
+    </body>
 </html>
