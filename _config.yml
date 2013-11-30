@@ -2,5 +2,15 @@ safe: true
 lsi: false
 pygments: true
 source: .
-exclude: ["Gemfile*", "*.sublime-*", "README.md", "CNAME", "compass"]
+exclude:
+    [
+        "*.sublime-*",
+        "CNAME",
+        "compass",
+        "config.rb",
+        "Gemfile*",
+        "README.md",
+        "submodules",
+        "watch.sh"
+    ]
 encoding: UTF-8
