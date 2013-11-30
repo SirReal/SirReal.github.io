@@ -1,0 +1,3 @@
+[submodule "submodules/tpw"]
+	path = submodules/tpw
+	url = git@github.com:mojombo/tpw.git
