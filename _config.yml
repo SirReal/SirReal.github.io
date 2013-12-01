@@ -4,13 +4,19 @@ pygments: true
 source: .
 exclude:
     [
+        "*.json",
+        "*.rb",
         "*.sublime-*",
+        "*.yaml",
+        "*.yml",
         "CNAME",
         "compass",
-        "config.rb",
+        "config",
         "Gemfile*",
+        "Gruntfile.js",
+        "node_modules",
+        "Procfile",
         "README.md",
-        "submodules",
-        "watch.sh"
+        "submodules"
     ]
 encoding: UTF-8
