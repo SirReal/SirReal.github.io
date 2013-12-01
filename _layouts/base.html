@@ -1,25 +1,35 @@
-{% assign p_first = page.path | split: '/' | first %}
-{% case p_first %}
-    {% when 'en' %}
-        {% assign en_link = page.path %}
-        {% assign es_link = page.path | split: '/' %}
-        {% assign es_link = es_link[1] %}
-    {% else %}
-        {% assign en_link = 'en' | append: '/' | append: page.path %}
-        {% assign es_link = page.path %}
-{% endcase %}
-<!DOCTYPE html>
+{% comment %}
+    This junk ain't worth it. Prob just google translate it...
+    {% assign path_parts = page.path | split:'/' %}
+    {% case path_parts[0] %}
+        {% when 'en' %}
+            {% assign en_link = page.path %}
+            {% assign es_link = page.path | remove_first:'en/' %}
+            {% assign page.lang = 'en' %}
+        {% else %}
+            {% assign en_link = page.path | prepend:'en/' %}
+            {% assign es_link = page.path %}
+            {% assign page.lang = 'es' %}
+    {% endcase %}
+    <a href="/{{ en_link }}" title="English">en</a>
+    <a href="/{{ es_link }}" title="Español">es</a>
+{% endcomment %}<!DOCTYPE html>
 <html>
     {% include head.html %}
     <body>
         <div class="wrapper">
             <header>
                 <h1>surrell<span class="light">.es</span></h1>
-                <p>{{ p_first }}</p>
-                <a href="/{{ en_link }}" title="English">en</a>
-                <a href="/{{ es_link }}" title="Español">es</a>
+                <div id="google_translate_element"></div><script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'es', includedLanguages: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, multilanguagePage: true, gaTrack: true, gaId: 'UA-40026905-1'}, 'google_translate_element');
+}
+</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
             </header>
             {{ content }}
+            {% for p in site.pages %}
+                <div>{{ p.title }}{{p.url}}</div>
+            {% endfor %}
         </div>
         <script src="js/scale.fix.js"></script>
     </body>
