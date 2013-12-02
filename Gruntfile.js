@@ -34,7 +34,9 @@ module.exports = function(grunt) {
         stripBanners: false
       },
       dist: {
-        src: [],
+        src: [
+          'compass/js/scale.fix.js'
+        ],
         dest: './js/main.js'
       }
     },
@@ -95,7 +97,7 @@ module.exports = function(grunt) {
     watch: {
       js: {
         files: '<%= jshint.src.src %>',
-        tasks: ['jshint:src']
+        tasks: ['jshint:src', 'concat']
       },
       sass: {
         files: '<%= compass.dist.options.sassDir %>',
@@ -103,6 +105,7 @@ module.exports = function(grunt) {
       },
       jekyll: {
         files: [
+          '*.html',
           '_data/**/*',
           '_drafts/**/*',
           '_includes/**/*',
@@ -112,7 +115,8 @@ module.exports = function(grunt) {
           'fonts/**/*',
           'img/**/*',
           'js/**/*'
-        ]
+        ],
+        tasks: ['jekyll']
       }
     },
 
