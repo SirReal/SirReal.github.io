@@ -19,16 +19,18 @@
     <body>
         <div class="wrapper">
             <header>
-                <h1>surrell<span class="light">.es</span></h1>
-                <div id="google_translate_element"></div>
+                <h1 class="page-title"><a href="/">surrell<span class="light">.es</span></a></h1>
+                {% comment %}
                 <ul>
                 {% for p in site.pages %}
                     <li><a href="{{p.url}}">{{ p.title }}</a></li>
                 {% endfor %}
                 </ul>
+                {% endcomment %}
             </header>
             {{ content }}
         </div>
+        {% include footer.html %}
         {% include scripts.html %}
     </body>
 </html>
