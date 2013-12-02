@@ -12,7 +12,9 @@ module.exports = function(grunt) {
     // Task configuration.
     // CLEAN
     clean: [
-      '_site'
+      '_site',
+      'validation-status.json',
+      'validation-report.json'
     ],
 
     jshint: {
