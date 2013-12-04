@@ -10,13 +10,10 @@ exclude:
         "*.yaml",
         "*.yml",
         "CNAME",
-        "compass",
-        "config",
         "Gemfile*",
         "Gruntfile.js",
         "node_modules",
         "Procfile",
         "README.md",
-        "submodules"
     ]
 encoding: "UTF-8"

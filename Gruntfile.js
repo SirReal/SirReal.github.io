@@ -19,13 +19,13 @@ module.exports = function(grunt) {
 
     jshint: {
       options: {
-        jshintrc: 'config/.jshintrc'
+        jshintrc: '_config/.jshintrc'
       },
       gruntfile: {
         src: 'Gruntfile.js'
       },
       src: {
-        src: ['compass/js/*.js']
+        src: ['_compass/js/*.js']
       },
     },
 
@@ -35,7 +35,7 @@ module.exports = function(grunt) {
       },
       dist: {
         src: [
-          'compass/js/scale.fix.js'
+          '_compass/js/scale.fix.js'
         ],
         dest: './js/main.js'
       }
@@ -123,8 +123,8 @@ module.exports = function(grunt) {
     compass: {
       dist: {
         options: {
-          config: 'config/config.rb',
-          sassDir: 'compass/sass'
+          config: '_config/config.rb',
+          sassDir: '_compass/sass'
         }
       }
     }

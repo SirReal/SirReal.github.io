@@ -1,10 +1,10 @@
 # Require any additional compass plugins here.
 
 # Set this to the root of your project when deployed:
-environment = :production
+environment = :development
 http_path = "/"
 css_dir = "css"
-sass_dir = "compass/sass"
+sass_dir = "_compass/sass"
 images_dir = "img"
 javascripts_dir = "js"
 
