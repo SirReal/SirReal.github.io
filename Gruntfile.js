@@ -98,11 +98,11 @@ module.exports = function(grunt) {
     watch: {
       js: {
         files: '<%= jshint.src.src %>',
-        tasks: ['jshint:src', 'concat']
+        tasks: ['jshint:src', 'dist-js']
       },
       sass: {
         files: '<%= compass.dist.options.sassDir %>/*',
-        tasks: ['compass:dist']
+        tasks: ['dist-css']
       },
       jekyll: {
         files: [
@@ -128,6 +128,20 @@ module.exports = function(grunt) {
           sassDir: '_compass/sass'
         }
       }
+    },
+
+    cssmin: {
+      options: {
+        keepSpecialComments: '*',
+        report: 'min'
+      },
+      minify: {
+        expand: true,
+        cwd: 'css/',
+        src: ['*.css', '!*.min.css'],
+        dest: 'css/',
+        ext: '.min.css'
+      }
     }
 
   });
@@ -139,6 +153,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
@@ -158,7 +173,7 @@ module.exports = function(grunt) {
   grunt.registerTask('dist-js', ['concat', 'uglify']);
 
   // CSS distribution task.
-  grunt.registerTask('dist-css', ['compass']);
+  grunt.registerTask('dist-css', ['compass', 'cssmin']);
 
   // Fonts distribution task.
   grunt.registerTask('dist-fonts', ['copy']);
