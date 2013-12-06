@@ -134,6 +134,13 @@ module.exports = function(grunt) {
       }
     },
 
+    concurrent: {
+      t1: ['connect:server:keepalive', 'watch'],
+      options: {
+        logConcurrentOutput: true
+      }
+    },
+
     cssmin: {
       options: {
         keepSpecialComments: '*',
@@ -152,6 +159,7 @@ module.exports = function(grunt) {
 
 
   // These plugins provide necessary tasks.
+  grunt.loadNpmTasks('grunt-concurrent');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-concat');
@@ -168,7 +176,7 @@ module.exports = function(grunt) {
   grunt.registerTask('validate-html', ['jekyll', 'validation']);
 
   // Serve the site
-  grunt.registerTask('serve', ['connect:server:keepalive']);
+  grunt.registerTask('serve', ['dist', 'concurrent']);
 
   // Test task.
   grunt.registerTask('test', ['dist-css', 'jshint:src', 'validate-html']);
@@ -183,7 +191,7 @@ module.exports = function(grunt) {
   grunt.registerTask('dist-fonts', ['copy']);
 
   // Full distribution task.
-  grunt.registerTask('dist', ['clean', 'dist-css', 'dist-fonts', 'dist-js']);
+  grunt.registerTask('dist', ['clean', 'dist-css', 'dist-fonts', 'dist-js', 'jekyll']);
 
   // Default task.
   grunt.registerTask('default', ['test', 'dist']);
