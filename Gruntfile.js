@@ -171,7 +171,7 @@ module.exports = function(grunt) {
   grunt.registerTask('serve', ['connect:server:keepalive']);
 
   // Test task.
-  grunt.registerTask('test', ['dist-css', 'jshint', 'validate-html']);
+  grunt.registerTask('test', ['dist-css', 'jshint:src', 'validate-html']);
 
   // JS distribution task.
   grunt.registerTask('dist-js', ['concat', 'uglify']);
