@@ -14,7 +14,7 @@
     <a href="/{{ en_link }}" title="English">en</a>
     <a href="/{{ es_link }}" title="Español">es</a>
 {% endcomment %}<!DOCTYPE html>
-<html>
+<html lang="es-ES">
     {% include head.html %}
     <body>
         <div class="wrapper">
@@ -28,6 +28,8 @@
                 </ul>
                 {% endcomment %}
             </header>
+            <section>{{page.path}}</section>
+            <section>{{page.url}}</section>
             {{ content }}
         </div>
         {% include footer.html %}
