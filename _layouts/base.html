@@ -20,16 +20,7 @@
         <div class="wrapper">
             <header>
                 <h1 class="page-title"><a href="/">surrell<span class="light">.es</span></a></h1>
-                {% comment %}
-                <ul>
-                {% for p in site.pages %}
-                    <li><a href="{{p.url}}">{{ p.title }}</a></li>
-                {% endfor %}
-                </ul>
-                {% endcomment %}
             </header>
-            <section>{{page.path}}</section>
-            <section>{{page.url}}</section>
             {{ content }}
         </div>
         {% include footer.html %}
