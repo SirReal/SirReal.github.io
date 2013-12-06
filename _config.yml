@@ -1,6 +1,10 @@
-safe: true
+branches:
+  only:
+    - master
+encoding: "UTF-8"
 lsi: false
 pygments: true
+safe: true
 source: .
 url: http://surrell.es
 exclude:
@@ -17,4 +21,3 @@ exclude:
         "Procfile",
         "README.md",
     ]
-encoding: "UTF-8"
