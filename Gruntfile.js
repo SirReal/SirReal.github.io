@@ -106,7 +106,7 @@ module.exports = function(grunt) {
       },
       jekyll: {
         files: [
-          '*.html',
+          '**/*.html',
           '_data/**/*',
           '_drafts/**/*',
           '_includes/**/*',
@@ -114,8 +114,12 @@ module.exports = function(grunt) {
           '_posts/**/*',
           'css/**/*',
           'fonts/**/*',
+          'humans.txt',
           'img/**/*',
-          'js/**/*'
+          'js/**/*',
+          'robots.txt',
+          'sitemap.xml',
+          '!_site/*'
         ],
         tasks: ['jekyll']
       }
