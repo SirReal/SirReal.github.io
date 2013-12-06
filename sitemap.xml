@@ -1,0 +1,27 @@
+---
+---
+{% comment %}
+
+    This template generates an XML sitemap following guidelines
+    from http://www.sitemaps.org/
+
+    There is a check to ensure the extension is html to
+    avoid including sitemap.xml, robots.txt, etc. in the sitemap.
+
+    If lastmod, changefreq, or priority are included in YAML frontmatter,
+    they will be included in the sitemap.
+
+    The layout of this file is a bit ugly, but it provides clean XML.
+
+{% endcomment %}<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{% for p in site.pages %}{% assign ext = p.url | split: '.' | last %}{% if ext == 'html' %}
+    <url>
+        <loc>{{ site.url | append: '/' | append: p.path | xml_escape }}</loc>{% if page.lastmod %}
+        {{ page.lastmod | xml_escape }}
+        {% endif %}{% if page.changefreq %}
+        {{ page.changefreq | xml_escape }}
+        {% endif %}{% if page.priority %}
+        {{ page.priority | xml_escape }}
+        {% endif %}
+    </url>{% endif %}{% endfor %}
+</urlset>

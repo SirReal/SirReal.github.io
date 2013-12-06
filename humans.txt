@@ -1,0 +1,12 @@
+---
+---
+/* TEAM */
+    Designer, Developer, Everything-er: Jon Surrell
+    Contact: jon [at] surrell.es
+    Site: {{ site.url }}
+    Twitter: @jonsurrell
+
+/* SITE */
+    Last update: {{ site.time | date: '%Y/%m/%d' }}
+    Standards: HTML5, CSS3
+    Language: Español / Castellano
