@@ -13,8 +13,7 @@ module.exports = function(grunt) {
     // CLEAN
     clean: [
       '_site',
-      'validation-status.json',
-      'validation-report.json'
+      '_validation'
     ],
 
     jshint: {
@@ -81,9 +80,11 @@ module.exports = function(grunt) {
 
     validation: {
       options: {
-        reset: true,
-        doctype: 'HTML5',
         charset: 'utf-8',
+        doctype: 'HTML5',
+        path: '_validation/validation-status.json',
+        reportpath: '_validation/validation-report.json',
+        reset: true,
         relaxerror: [
           "Bad value X-UA-Compatible for attribute http-equiv on element meta.",
           "Element img is missing required attribute src.",

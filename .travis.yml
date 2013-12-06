@@ -1,9 +1,12 @@
 language: node_js
+
+branches:
+  only:
+    - master
+
 before_script:
   - gem install bundler
   - bundle install
-#  - gem install compass-validator
   - npm install -g grunt-cli
+
 script: "grunt test"
-# CSS doesn't validate, some props are experimantal / unstandardized
-# script: "grunt test && ln -s _config/config.rb && compass validate"

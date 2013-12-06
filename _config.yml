@@ -1,6 +1,3 @@
-branches:
-  only:
-    - master
 encoding: "UTF-8"
 lsi: false
 pygments: true
@@ -9,8 +6,6 @@ source: .
 url: http://surrell.es
 exclude:
     [
-        "*.json",
-        "*.rb",
         "*.sublime-*",
         "*.yaml",
         "*.yml",
@@ -18,6 +13,5 @@ exclude:
         "Gemfile*",
         "Gruntfile.js",
         "node_modules",
-        "Procfile",
-        "README.md",
+        "README.md"
     ]
