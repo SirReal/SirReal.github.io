@@ -1,8 +1,8 @@
 language: node_js
 before_script:
-  - gem install --no-document github-pages
-  - gem install --no-document compass
-  - gem install --no-document compass-validator
+  - gem install github-pages
+  - gem install compass
+#  - gem install compass-validator
   - npm install -g grunt-cli
 script: "grunt test"
 # CSS doesn't validate, some props are experimantal / unstandardized
