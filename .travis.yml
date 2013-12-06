@@ -1,7 +1,7 @@
 language: node_js
 before_script:
   - gem install bundler
-  - bundler install
+  - bundle install
 #  - gem install compass-validator
   - npm install -g grunt-cli
 script: "grunt test"
