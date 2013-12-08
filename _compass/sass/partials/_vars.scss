@@ -1,3 +1,14 @@
+// Color palette
+// http://design-seeds.com/index.php/home/entry/color-squawk1
+$brown:  #3f2b2f; // primary dark ; orig: #543f43
+$yellow: #f7dd34; // primary light
+$red:    #99322c; // secondary light
+$teal:   #76b59d; // accent
+$tan:    #c9c6a5; // ...
+$gray:   #d4d4c9; // use?
+
+
 // URLs for build imgs
-$build-stat-img: "https://secure.travis-ci.org/SirReal/SirReal.github.io.png";
-$dev-deps-img:   "https://david-dm.org/SirReal/SirReal.github.io.png";
+// Unused, called in HTML
+// $build-stat-img: "https://secure.travis-ci.org/SirReal/SirReal.github.io.png?branch=master";
+// $dev-deps-img:   "https://david-dm.org/SirReal/SirReal.github.io.png";

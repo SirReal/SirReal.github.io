@@ -10,3 +10,6 @@
     Last update: {{ site.time | date: '%Y/%m/%d' }}
     Standards: HTML5, CSS3
     Language: Español / Castellano
+
+/* THANKS */
+    http://www.fontsquirrel.com/fonts/Comfortaa
