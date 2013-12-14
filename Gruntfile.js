@@ -105,7 +105,10 @@ module.exports = function(grunt) {
         tasks: ['jshint:src', 'dist-js', 'jekyll']
       },
       sass: {
-        files: '<%= compass.dist.options.sassDir %>/*',
+        files: [
+          '<%= compass.dist.options.sassDir %>/**/*.scss',
+          '<%= compass.dist.options.sassDir %>/**/*.sass',
+        ],
         tasks: ['dist-css', 'jekyll']
       },
       jekyll: {
