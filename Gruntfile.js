@@ -97,13 +97,16 @@ module.exports = function(grunt) {
     },
 
     watch: {
+      options: {
+        livereload: true
+      },
       js: {
         files: '<%= jshint.src.src %>',
-        tasks: ['jshint:src', 'dist-js']
+        tasks: ['jshint:src', 'dist-js', 'jekyll']
       },
       sass: {
         files: '<%= compass.dist.options.sassDir %>/*',
-        tasks: ['dist-css']
+        tasks: ['dist-css', 'jekyll']
       },
       jekyll: {
         files: [
@@ -113,11 +116,9 @@ module.exports = function(grunt) {
           '_includes/**/*',
           '_layouts/**/*',
           '_posts/**/*',
-          'css/**/*',
           'fonts/**/*',
           'humans.txt',
           'img/**/*',
-          'js/**/*',
           'robots.txt',
           'sitemap.xml',
           '!_site/*'
