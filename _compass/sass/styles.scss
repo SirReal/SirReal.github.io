@@ -1,35 +1,28 @@
 /*!
-Based on a theme by orderedlist: https://github.com/orderedlist
+Author: Jon Surrell
+Author email: jon@surrell.es
+Author URI: http://surrell.es
 */
-// This import applies a global reset to any page that imports this stylesheet.
+// Reset
 @import "blueprint/reset";
 
-// To configure blueprint, edit the partials/base.sass file.
-// @import "partials/base";
+// Blueprint config
+@import "partials/base";
 
 // Import all the default blueprint modules so that we can access their mixins.
 @import "blueprint";
 
+// Debug grid
+@import "blueprint/debug";
+
+// syntax.css This is for code highlighting
+// file is symlinked to submodule with code
+// @import "partials/syntax";
+
 // Combine the partials into a single screen stylesheet.
-// @import "partials/page";
+@import "partials/page";
 // @import "partials/form";
 // @import "partials/two_col";
-
-// My variables
-@import "partials/vars";
-
-// syntax.css
-@import "partials/syntax";
-
-h1, h2, h3, h4, h5, h6 {
-  color: #222;
-}
-
-body {
-  font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color:#777;
-  font-weight:300;
-}
 
 @import "partials/nav";
 

@@ -1,7 +1,5 @@
-.work-nav {
-    background-color: $color-primary;
+@import "compass/typography/lists/inline-block-list";
 
-    li {
-        display: inline-block;
-    }
+.main-nav-menu {
+    @include inline-block-list;
 }
