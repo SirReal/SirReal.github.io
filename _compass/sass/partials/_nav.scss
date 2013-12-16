@@ -1,5 +1,53 @@
 @import "compass/typography/lists/inline-block-list";
 
+
+$main-nav-size: 100px;
+$line-size: 10px;
+
+.main-nav {
+
+    background-image: url('/img/circle.svg');
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: $main-nav-size $main-nav-size;
+    height: $main-nav-size;
+    padding-bottom: $main-nav-size;
+
+}
+
 .main-nav-menu {
-    @include inline-block-list;
+    text-align: justify;
+
+    border-bottom-width: $line-size;
+    border-color: $yellow;
+    border-style: solid;
+    height: ($main-nav-size / 2) - ($line-size / 2);
+    line-height: ($main-nav-size / 2);
+    padding-left: $main-nav-size + $main-nav-size;
+    padding-right: $main-nav-size;
+
+    &:after {
+        content: '';
+        display: inline-block;
+        width: 100%;
+    }
+
+    > li {
+        display: inline-block;
+        text-align: center;
+    }
+
+    a
+    a:hover,
+    a:link,
+    a:focus,
+    a:visited {
+        color: $font-color;
+        text-decoration: none;
+    }
+
+    a:hover {
+        transition: all 1s;
+        padding-top: 20px;
+    }
 }
