@@ -550,16 +550,6 @@ footer {
   bottom: 50px;
 }
 
-.build-stat-fig {
-  margin: 0 0 10px;
-  text-align: right;
-}
-
-.build-stat-figcap {
-  text-align: left;
-  margin-bottom: 5px;
-}
-
 .light {
   font-weight: normal;
 }
