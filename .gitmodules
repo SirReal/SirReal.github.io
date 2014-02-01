@@ -3,3 +3,7 @@
 	path = _submodules/tpw
 	url = https://github.com/mojombo/tpw.git
 	branch = master
+[submodule "_submodules/bootstrap"]
+	path = _submodules/bootstrap
+	url = https://github.com/twbs/bootstrap.git
+	branch = master
