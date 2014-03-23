@@ -1,18 +1,22 @@
-encoding: "UTF-8"
+# GH Pages Overrides
+# These settings are forces by gh-pages
+safe: true
 lsi: false
 pygments: true
-safe: true
 source: .
+# Settings
+name: Surrell.es
 url: http://surrell.es
+encoding: utf-8
+markdown: redcarpet
+redcarpet:
+  extensions:
+    - tables
+    - strikethrough
 exclude:
-    [
-        "*.sublime-*",
-        "*.yaml",
-        "*.yml",
-        "CNAME",
-        "Gemfile*",
-        "Gruntfile.js",
-        "node_modules",
-        "README.md"
-    ]
-dev: true
+  - CNAME
+  - Gemfile*
+  - gulpfile.js
+  - node_modules
+  - package.json
+  - README*

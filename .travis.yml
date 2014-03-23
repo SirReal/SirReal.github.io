@@ -7,6 +7,8 @@ branches:
 before_script:
   - gem install bundler
   - bundle install
-  - npm install -g grunt-cli
+  - npm install -g gulp
+  - npm install
 
-script: "grunt test"
+# @todo
+script: "gulp test"
