@@ -3,7 +3,7 @@ lsi: false
 pygments: true
 safe: true
 source: .
-url: http://surrell.es
+url: 'http://jonsurrell.com'
 exclude:
     [
         "*.sublime-*",
