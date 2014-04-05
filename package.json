@@ -1,12 +1,12 @@
 {
-    "name": "surrell.es"
+    "name": "jonsurrell.com"
   , "description": "Homepage for SirReal"
   , "version": "0.1.0"
-  , "keywords": ["surrell.es"]
-  , "homepage": "http://surrell.es"
+  , "keywords": ["jonsurrell.com"]
+  , "homepage": "http://jonsurrell.com"
   , "author": {
         "name": "Jon Surrell"
-      , "url": "http://surrell.es"
+      , "url": "http://jonsurrell.com"
   }
   , "repository": {
       "type": "git"

@@ -2,4 +2,4 @@ User-agent: *
 Disallow:
 Allow: *
 
-Sitemap: http://surrell.es/sitemap.xml
+Sitemap: http://jonsurrell.com/sitemap.xml

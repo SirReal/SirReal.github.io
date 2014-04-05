@@ -1,6 +1,6 @@
 SirReal.github.io
 =================
-My personal website: [surrell.es](http://surrell.es).
+My personal website: [jonsurrell.com](http://jonsurrell.com).
 
 It's a work in progress, as well as a personal playground.
 
