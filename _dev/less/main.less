@@ -128,33 +128,48 @@ a:visited { color: #a0a; }
 /*****************************************************************************/
 
 /* standard */
-.post pre {
-  border: 1px solid #ddd;
-  background-color: #eef;
-  padding: 0 .4em;
-}
+// .post pre {
+//   border: 1px solid #ddd;
+//   background-color: ;
+//   padding: 0 .4em;
+// }
 
 .post ul, .post ol {
   margin-left: 1.35em;
 }
 
-.post code {
-  border: 1px solid #ddd;
-  background-color: #eef;
-  padding: 0 .2em;
-}
+// .post code {
+//   border: 1px solid #ddd;
+//   background-color: #eef;
+//   padding: 0 .2em;
+// }
 
-.post pre code {
-  border: none;
-}
+// .post pre code {
+//   border: none;
+// }
 
 /* terminal */
-.post pre.terminal {
-  border: 1px solid #000;
-  background-color: #333;
-  color: #FFF;
+// .post pre.terminal {
+//   border: 1px solid #000;
+//   background-color: #333;
+//   color: #FFF;
+// }
+
+// .post pre.terminal code {
+//   background-color: #333;
+// }
+
+.highlight {
+  border-radius: 3px;
+  display: block;
+  padding: 1em;
+  line-height: 1.2;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
 }
 
-.post pre.terminal code {
-  background-color: #333;
+pre {
+  background-clip: border;
 }
+
+@import "monokai.less";

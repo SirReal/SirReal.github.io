@@ -5,8 +5,8 @@ lsi: false
 pygments: true
 source: .
 # Settings
-name: Surrell.es
-url: http://surrell.es
+name: jonsurrell.com
+url: http://jonsurrell.com
 encoding: utf-8
 markdown: redcarpet
 redcarpet:
