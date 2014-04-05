@@ -4,6 +4,7 @@ pygments: true
 safe: true
 source: .
 url: 'http://jonsurrell.com'
+markdown: redcarpet
 exclude:
     [
         "*.sublime-*",
