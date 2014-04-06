@@ -53,8 +53,12 @@ gulp.task('js', function() {
     .pipe(gulp.dest(paths.jsOut))
 })
 
-gulp.task('jekyll-build', ['css', 'js'], function() {
-  jekyll(['build'])
+gulp.task('build', ['css', 'js'], function() {
+  return jekyll(['build'])
+})
+
+gulp.task('dev-build', ['css', 'js'], function() {
+  return jekyll(['build', '--drafts'])
 })
 
 gulp.task('default', ['css', 'js'], function() {

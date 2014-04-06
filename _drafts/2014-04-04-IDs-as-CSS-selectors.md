@@ -60,27 +60,20 @@ Easy again, right?
 That didn't work. We were hoping that our cascading CSS would allow the rule for `.make-this-blue` to override the rule for `#page-title`. The problem is that before CSS even _thinks_ about cascading, it compares at the _specificity_ of rules. The break down is essentially the following (most specific to least):
 
 1. Style attribute
+
+   This is where you actually write style inside of your HTML tags. Don't expect CSS to override that.
+
 1. ID
+
+   Here's our friend, the `#ID` selector. He's really specific in the world of CSS.
+
 1. class
+
+   `.classes` are a pretty good selector to use for most of our CSS. Along with classes are `:pseudo-classes` and `[attribute=selectors]` at this level of specificity.
+
 1. element
 
-### Style attribute
-
-This is where you actually write style inside of your HTML tags. Don't expect CSS to override that.
-
-### ID
-
-Here's our friend, the `#ID` selector. He's really specific in the world of CSS.
-
-### Class
-
-`.classes` are a pretty good selector to use for most of our CSS. Along with classes are `:pseudo-classes` and `[attribute=selectors]` at this level of specificity.
-
-### Element
-
-The element selector is for generic HTML elements, like `h1` in our example.
-
-### Modifiers
+   The element selector is for generic HTML elements, like `h1` in our example.
 
 Keep in mind that using inheritance in our selectors increase the specificity slightly, meaning that `ul li` is more specific than `li`.
 
@@ -99,7 +92,9 @@ You're absolutely right. We can. The `!important` marker just crushes everything
 This will do the trick:
 
 ```html
-<h1 id="page-title" class="page-title make-this-blue">This is the title of this page.</h1>
+<h1 id="page-title" class="page-title make-this-blue">
+  This is the title of this page.
+</h1>
 ```
 
 ```css
