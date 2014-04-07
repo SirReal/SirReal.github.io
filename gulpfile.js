@@ -33,7 +33,6 @@ var jekyll = function(jekyllParams) {
   })
 }
 
-
 gulp.task('css', function() {
   return gulp.src(paths.lessIn)
     .pipe(less({
@@ -53,18 +52,50 @@ gulp.task('js', function() {
     .pipe(gulp.dest(paths.jsOut))
 })
 
+/**
+* Production builds
+*/
 gulp.task('build', ['css', 'js'], function() {
   return jekyll(['build'])
 })
 
+/**
+* Dev builds
+* includes drafts & future
+*/
 gulp.task('dev', ['css', 'js'], function() {
   return jekyll(['build', '--drafts'])
 })
 
+
+/**
+* tests
+*/
+gulp.task('test', ['build'], function() {
+  var w3cjs = require('w3cjs')
+
+  gulp.src('_site/**/*.html')
+    .pipe(console.log)
+
+  var results = w3cjs.validate({
+    file: '_site/index.html',
+    doctype: 'HTML5',
+    charset: 'utf-8',
+    callback: function(res) {
+      console.log(res)
+    }
+  })
+})
+
+/**
+* Default task
+* build & watch
+* used for local dev
+*/
 gulp.task('default', ['css', 'js'], function() {
   var lrPort = 35729
 
-  var j = jekyll(['build', '--watch', '--drafts'])
+  var j = jekyll(['build', '--watch', '--drafts', '--future'])
   j.stdout
     .on('readable', function() {
       var output = this.read().toString().trim()

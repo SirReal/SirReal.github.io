@@ -3,12 +3,11 @@ language: node_js
 branches:
   only:
     - master
+    - redo
 
 before_script:
-  - gem install bundler
-  - bundle install
+  - gem install github-pages
   - npm install -g gulp
   - npm install
 
-# @todo
 script: "gulp test"
