@@ -1,11 +1,9 @@
-SirReal.github.io
+jonsurrell.com
 =================
 My personal website: [jonsurrell.com](http://jonsurrell.com).
 
 It's a work in progress, as well as a personal playground and testing area.
 
-[![Build Status](https://secure.travis-ci.org/SirReal/SirReal.github.io.png)]
+[![Build Status](https://secure.travis-ci.org/sirreal/jonsurrell.com.png)]
 
-[![devDependency Status](https://david-dm.org/SirReal/SirReal.github.io.png)]
-
-[![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)(http://gruntjs.com/)]
+[![devDependency Status](https://david-dm.org/sirreal/jonsurrell.com.png)]
