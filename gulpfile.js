@@ -57,7 +57,7 @@ gulp.task('build', ['css', 'js'], function() {
   return jekyll(['build'])
 })
 
-gulp.task('dev-build', ['css', 'js'], function() {
+gulp.task('dev', ['css', 'js'], function() {
   return jekyll(['build', '--drafts'])
 })
 

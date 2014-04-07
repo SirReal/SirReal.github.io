@@ -1,6 +1,8 @@
 ---
 title: IDs as CSS Selectors
 layout: post
+tags:
+  - CSS
 ---
 A few years ago, I was surprised when I ran some CSS I'd written through a linter, and it complained about using IDs as selectors. I've come to understand why that linter complained, and I'll whare with you why I now consider using IDs as CSS selectors to be, in general, a _bad practice_.
 
