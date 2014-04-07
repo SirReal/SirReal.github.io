@@ -24,4 +24,14 @@
         {{ page.priority | xml_escape }}
         {% endif %}
     </url>{% endif %}{% endfor %}
+{% for p in site.posts %}{% assign ext = p.url | split: '.' | last %}{% if ext == 'html' %}
+    <url>
+        <loc>{{ site.url | append: '/' | append: p.path | xml_escape }}</loc>{% if page.lastmod %}
+        {{ page.lastmod | xml_escape }}
+        {% endif %}{% if page.changefreq %}
+        {{ page.changefreq | xml_escape }}
+        {% endif %}{% if page.priority %}
+        {{ page.priority | xml_escape }}
+        {% endif %}
+    </url>{% endif %}{% endfor %}
 </urlset>

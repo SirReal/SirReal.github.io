@@ -1,5 +1,4 @@
 _site/
-.sass-cache/
-Gemfile.lock
-validation-*.json
 node_modules
+css/
+js/

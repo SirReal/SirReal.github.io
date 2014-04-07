@@ -4,7 +4,7 @@ layout: post
 tags:
   - CSS
 ---
-A few years ago, I was surprised when I ran some CSS I'd written through a linter, and it complained about using IDs as selectors. I've come to understand why that linter complained, and I'll whare with you why I now consider using IDs as CSS selectors to be, in general, a _bad practice_.
+A few years ago, I was surprised when I ran some CSS I'd written through a linter and it complained about using IDs as selectors. I've come to understand why that linter complained, and I'll whare with you why I now consider using IDs as CSS selectors to be, in general, a _bad practice_.
 
 The basic idea of this is that we want CSS to **cascade**. Essentially this means that if you write 2 rules with overlapping definitions, the later one will have precedence and be applied. Using IDs tends to screw this up. Let's see if we can make this short and sweet:
 

@@ -1,5 +1,5 @@
 # GH Pages Overrides
-# These settings are forces by gh-pages
+# These settings are forced by gh-pages
 safe: true
 lsi: false
 pygments: true
@@ -20,3 +20,4 @@ exclude:
   - node_modules
   - package.json
   - README*
+  - .listen.js
