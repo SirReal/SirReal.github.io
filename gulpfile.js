@@ -70,21 +70,12 @@ gulp.task('dev', ['css', 'js'], function() {
 
 /**
 * tests
+* @todo: write some tests
+*  [ ] html
+*  [ ] js
+*  [ ] css
 */
 gulp.task('test', ['build'], function() {
-  var w3cjs = require('w3cjs')
-
-  gulp.src('_site/**/*.html')
-    .pipe(console.log)
-
-  var results = w3cjs.validate({
-    file: '_site/index.html',
-    doctype: 'HTML5',
-    charset: 'utf-8',
-    callback: function(res) {
-      console.log(res)
-    }
-  })
 })
 
 /**
