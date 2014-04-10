@@ -1,5 +1,5 @@
-SirReal.github.io
-=================
+# jonsurrell.com
+
 My personal website: [jonsurrell.com](http://jonsurrell.com).
 
 It's a work in progress, as well as a personal playground.
