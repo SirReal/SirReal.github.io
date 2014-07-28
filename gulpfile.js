@@ -6,11 +6,11 @@ var gulp = require('gulp'),
     less = require('gulp-less'),
     uglify = require('gulp-uglify')
 
-    // Non gulp
+// Non gulp
 var express = require('express'),
     spawn = require('child_process').spawn
 
-    // Vars
+// Vars
 var paths = {
       site: '_site',
       lessIn: '_dev/less/main.less',
