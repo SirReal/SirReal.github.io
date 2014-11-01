@@ -13,6 +13,7 @@ var paths = {
       site: '_site',
       posts: '_posts/**/*.jade',
       layouts: '_layouts/**/*.jade',
+      includes: '_includes/**/*.jade',
       less: {
         in: '_dev/less/main.less',
         out: 'css'
@@ -81,5 +82,26 @@ gulp.task('default', ['css', 'js', 'build'], function() {
     .listen(4000)
 
   gulp.watch(paths.js.in, ['js'])
-  gulp.watch([paths.posts, paths.layouts], ['build'])
+  gulp.watch([paths.posts,
+              paths.layouts,
+              paths.includes
+             ], function(e) {
+    console.log(e);
+    gulp.start('build')
+    lr.changed({
+      body: {
+        files: [
+          '*'
+        ]
+      }
+    })
+//     ['build']
+//         lr.changed({
+//           body: {
+//             files: [
+//               '*'
+//             ]
+//           }
+//         })
+  })
 })
