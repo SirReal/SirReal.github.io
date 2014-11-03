@@ -14,6 +14,7 @@ var paths = {
       blog: '_site/blog',
       posts: '_posts/**/*.jade',
       pages: '_pages/**/*.jade',
+      static: '_static/**/*',
       layouts: '_layouts/**/*.jade',
       includes: '_includes/**/*.jade',
       less: {
@@ -50,7 +51,7 @@ gulp.task('js', function() {
 });
 
 
-gulp.task('build', ['build:posts', 'build:pages']);
+gulp.task('build', ['build:posts', 'build:pages', 'copy']);
 
 gulp.task('build:posts', function() {
   return gulp.src(paths.posts)
@@ -63,6 +64,11 @@ gulp.task('build:pages', function() {
   return gulp.src(paths.pages)
     .pipe(jade())
       .on('error', function(e) {console.log(e);})
+    .pipe(gulp.dest(paths.site));
+});
+
+gulp.task('copy', function() {
+  return gulp.src(paths.static)
     .pipe(gulp.dest(paths.site));
 });
 

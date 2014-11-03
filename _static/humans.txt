@@ -1,5 +1,3 @@
----
----
 /* TEAM */
     Site by: Jon Surrell
     Site: {{ site.url }}
