@@ -23,6 +23,9 @@
   "devDependencies": {
     "connect-livereload": "^0.5",
     "express": "^4.10",
+    "gulp-markdown": "^1.0.0",
+    "jade": "^1.7.0",
+    "through2": "^0.6.3",
     "tiny-lr": "^0.1",
     "w3cjs": "^0.1"
   },
