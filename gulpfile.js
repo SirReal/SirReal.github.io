@@ -111,7 +111,7 @@ gulp.task('default', ['css', 'js', 'build'], function() {
     .use(express.static('_site'))
     .listen(4000);
 
-  gutil.log('Live preview @ http://localhost:4000');
+  gutil.log('Live @ http://localhost:4000');
 
   gulp.watch(paths.js.in, ['js']);
   gulp.watch(paths.pages, function(e) {
