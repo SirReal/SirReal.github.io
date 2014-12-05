@@ -5,3 +5,8 @@ block title
 
 block content
   p welcome to my page.
+
+  ul
+    each post in posts
+      li
+        a= post.title

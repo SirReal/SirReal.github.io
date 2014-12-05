@@ -128,23 +128,27 @@ gulp.task('default', ['css', 'js', 'build'], function() {
 
   gulp.watch(paths.posts, function(e) {
     console.log(e);
-    gulp.start('build:posts');
-    lr.changed({
-      body: {
-        files: [
-          '*'
-        ]
-      }
-    });
+    gulp.start('build:posts')
+      .on('task_stop', function() {
+        lr.changed({
+          body: {
+            files: [
+              '*'
+            ]
+          }
+        });
+      });
   });
+
   gulp.watch([paths.layouts, paths.includes], function(e) {
-    gulp.start('build');
-    lr.changed({
-      body: {
-        files: [
-          '*'
-        ]
-      }
+    gulp.start('build').on('task_stop', function() {
+      lr.changed({
+        body: {
+          files: [
+            '*'
+          ]
+        }
+      });
     });
   });
 });
