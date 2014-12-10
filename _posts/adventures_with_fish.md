@@ -48,6 +48,14 @@ Completions are fast. You'll notice right away as you type a command that
 I really haven't found many. The thing I've missed most with fish is `!!` as in `sudo !!` or `svn !!`.
 I miss that, but it's really not a big deal to type <kbd title="key-up">↑</kbd><kbd title="key-home">HOME</kbd> `sudo`.
 
+Ok, as I've continued to use fish, I have found one.
+The line editor uses emacs and a copy-paste system that seems designed to drive me nuts.
+Or at least I haven't taken enough time to figure out what's going on.
+I ususally copy/paste from the terminal using my mouse for selection (I try to limit mouse use, but this is one big use case for me).
+When I'm on the command line, I delete words to the left with ctrl+w, which with emacs bindings puts the string into the system paste buffer and I lose when I've got there, which I often want to paste later, and end up removing and pasting the fish line a few times before I realize what's happening.
+Fish does appear to have [vi bindings](#) in the works, but as far as I've seen, the feature is still half-baked.
+
+
 1. Is familiar (or close enough to bash that there's no big learning curve).
 1. Is fast.
 1. Has excellent completion support.
