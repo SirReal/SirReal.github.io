@@ -1,7 +1,7 @@
 {
   "name": "jonsurrell.com",
   "description": "Jon Surrell's homepage",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "homepage": "http://jonsurrell.com",
   "author": {
     "name": "Jon Surrell",
@@ -21,25 +21,9 @@
     }
   ],
   "devDependencies": {
-    "connect-livereload": "^0.5",
-    "express": "^4.10",
-    "gulp-markdown": "^1.0.0",
-    "jade": "^1.7.0",
-    "through2": "^0.6.3",
-    "tiny-lr": "^0.1",
-    "w3cjs": "^0.1"
   },
   "dependencies": {
-    "gulp": "^3.8",
-    "gulp-concat": "^2.4",
-    "gulp-jscs": "^1.2",
-    "gulp-jshint": "^1.8",
-    "gulp-less": "^1.3",
-    "gulp-uglify": "^1.0",
-    "gulp-util": "^3.0",
-    "gulp-jade": "^0.9.0"
   },
   "scripts": {
-    "build": "metalsmith"
   }
 }
