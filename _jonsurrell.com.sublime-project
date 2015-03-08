@@ -5,8 +5,7 @@
 			"follow_symlinks": true,
 			"path": ".",
 			"folder_exclude_patterns": [
-				".sass-cache",
-				"_submodules"
+				"node_modules"
 			]
 		}
 	]

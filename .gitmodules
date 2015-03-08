@@ -1,5 +1,0 @@
-
-[submodule "_submodules/tpw"]
-	path = _submodules/tpw
-	url = https://github.com/mojombo/tpw.git
-	branch = master
