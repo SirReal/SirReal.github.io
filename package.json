@@ -21,9 +21,10 @@
     }
   ],
   "devDependencies": {
+    "htmllint-cli": "0.0.3"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "scripts": {
+    "test": "htmllint _site/**/*.html"
   }
 }
